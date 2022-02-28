@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Event from '../components/Event';
-import Link from 'next/Link'
+import { Link } from 'next/link'
 
 import Hero from '../components/Hero'
 import Post from '../components/Post';

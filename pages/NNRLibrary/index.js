@@ -1,8 +1,9 @@
-import Link from 'next/link'
+import { Link } from 'next/link'
 import React from 'react'
 
 const NNRLibrary = () => {
   return (
+    <>
     <div>
       <nav>
         <ul>
@@ -23,6 +24,7 @@ const NNRLibrary = () => {
         </ul>
       </nav>
     </div>
+    </>
   )
 }
 
@@ -36,7 +38,6 @@ South African Nuclear Safety Conventions Reports
 </div>
   )
 }
-
 
 export function Annual_Reports()  {
   return (
