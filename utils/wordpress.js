@@ -1,5 +1,5 @@
 
-const BASE_URL = 'https://www.my-wordpress.imbeu.co.za/wp-json/wp/v2';
+const BASE_URL = 'https://www.my-wordpress.imbeu.co.za/wp-json/wp/v2/posts';
 
 export async function getPosts() {
   const postsRes = await fetch(BASE_URL + '/posts?_embed');
