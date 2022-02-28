@@ -1,5 +1,5 @@
 
-import Link from 'next/link';
+import { Link } from 'next/link';
 
 import { getPost, getSlugs } from '../../utils/wordpress';
 

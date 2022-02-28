@@ -29,20 +29,3 @@ const NNRLibrary = () => {
 }
 
 export default NNRLibrary
-
-export function South_African_Nuclear_Safety_Conventions_Reports()  {
-  return (
-<div>
-South African Nuclear Safety Conventions Reports
-
-</div>
-  )
-}
-
-export function Annual_Reports()  {
-  return (
-<div>
-Annual Reports
-</div>
-  )
-}

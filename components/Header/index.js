@@ -1,10 +1,14 @@
 import React from 'react'
 import { Link } from 'next/link'
 import styles from '../../styles/Home.module.scss'
-import MobileMenu from '../MobileMenu'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 const Header = () => {
     return (
+
         <header>
+             <Router>
+    <Route path="/" component={Home} />
+  </Router>
             <nav className={styles.nav}>
                 <ul className={styles.nav_ul}>
                     <li className={styles.navlinks}>
@@ -67,4 +71,4 @@ const Header = () => {
     )
 }
 
-export default Header
+export default Header;

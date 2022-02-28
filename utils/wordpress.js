@@ -1,5 +1,5 @@
 
-const BASE_URL = 'https://gryphonite.co.za/webdev.gryphonite.co.za/newgryphon/wp-json/wp/v2';
+const BASE_URL = 'http://gryphonite.co.za/webdev.gryphonite.co.za/newgryphon/wp-json/wp/v2';
 
 export async function getPosts() {
   const postsRes = await fetch(BASE_URL + '/posts?_embed');

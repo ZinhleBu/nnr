@@ -1,6 +1,6 @@
-import React, { useEffect, useState} from 'react'
+import React from 'react'
 import styles from '../../styles/Home.module.scss'
-import { TwitterTimelineEmbed, TwitterShareButton, TwitterFollowButton, TwitterHashtagButton, TwitterMentionButton, TwitterTweetEmbed, TwitterMomentShare, TwitterDMButton, TwitterVideoEmbed, TwitterOnAirButton } from 'react-twitter-embed';
+import { TwitterTimelineEmbed } from 'react-twitter-embed';
 import { getEvents, getPosts } from '../../utils/wordpress';
 
 import Post from '../../components/Post';
@@ -8,15 +8,15 @@ import Event from '../../components/Event';
 
 export default function Sidebar({ posts, events }) {
   
-  const jsxPosts = posts.map((post,index) => {
+  const jsPosts = posts.map((post) => {
     const featuredMedia = post['_embedded']['wp:featuredmedia'][0];
-    return <Post post={post}     key={index} featuredMedia={featuredMedia} key={post.id} />;
+    return <Post post={post} featuredMedia={featuredMedia} key={post.id} />;
     
   });
  
-  const jsxEvents = events.map((event, index) => {
+  const jsEvents = events.map((event) => {
     const featuredMedia = event['_embedded']['wp:featuredmedia'][0];
-    return <Event event={event}     key={index} featuredMedia={featuredMedia} key={event.id} />;
+    return <Event event={event} featuredMedia={featuredMedia} key={event.id} />;
   });
   
 
@@ -26,7 +26,7 @@ export default function Sidebar({ posts, events }) {
         <h2 className={styles.sidebarTitle}>Latest News</h2>
         <div className={styles.sidebarCard}>
 
-          <p>{jsxPosts}</p>
+          <p>{jsPosts}</p>
           <p>New NNR logo announcement</p>
           <p>New NNR logo announcement</p>
           <p>New NNR logo announcement</p>
@@ -39,7 +39,7 @@ export default function Sidebar({ posts, events }) {
         <h2 className={styles.sidebarTitle}>Topics in Focus</h2>
         <div className={styles.sidebarCard}>
 
-          <p>New NNR logo announcement</p>
+          <p>{jsEvents}</p>
           <p>New NNR logo announcement</p>
           <p>New NNR logo announcement</p>
           <p>New NNR logo announcement</p>
@@ -77,6 +77,7 @@ export async function getStaticProps({ params }) {
     props: {
       posts,
       events,
+      media,
     },
     revalidate: 10, // In seconds
   };
