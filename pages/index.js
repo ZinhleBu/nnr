@@ -6,6 +6,7 @@ import Hero from '../components/Hero'
 import Post from '../components/Post';
 import Sidebar from '../components/Sidebar';
 import styles from '../styles/Home.module.scss'
+
 export default function Home() {
   const Img1 = "../images/nnr1.jpg"
   return (
