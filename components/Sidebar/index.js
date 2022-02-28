@@ -8,15 +8,15 @@ import Event from '../../components/Event';
 
 export default function Sidebar({ posts, events }) {
   
-  const jsxPosts = posts.map((post) => {
+  const jsxPosts = posts.map((post,index) => {
     const featuredMedia = post['_embedded']['wp:featuredmedia'][0];
-    return <Post post={post} featuredMedia={featuredMedia} key={post.id} />;
+    return <Post post={post}     key={index} featuredMedia={featuredMedia} key={post.id} />;
     
   });
  
-  const jsxEvents = events.map((event) => {
+  const jsxEvents = events.map((event, index) => {
     const featuredMedia = event['_embedded']['wp:featuredmedia'][0];
-    return <Event event={event} featuredMedia={featuredMedia} key={event.id} />;
+    return <Event event={event}     key={index} featuredMedia={featuredMedia} key={event.id} />;
   });
   
 
