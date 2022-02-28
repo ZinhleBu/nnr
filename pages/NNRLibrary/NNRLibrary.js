@@ -1,4 +1,4 @@
-import { Link } from 'next/link'
+import Link from 'react-router-dom'
 import React from 'react'
 
 const NNRLibrary = () => {
@@ -16,7 +16,7 @@ const NNRLibrary = () => {
           </li>
           <li>
             <Link>
-            <a href="/Annual_Reprts">
+            <a href="/AnnualReprts">
             South African Nuclear Safety Conventions Reports
             </a>
             </Link>

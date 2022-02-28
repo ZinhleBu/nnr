@@ -1,14 +1,15 @@
 import Head from 'next/head'
 
-import { Link } from 'next/link'
+import Link from 'react-router-dom'
 
-import Hero from '../components/Hero'
-import Post from '../components/Post';
-import Sidebar from '../components/Sidebar';
+import Hero from '../components/Hero/Hero'
+import Sidebar from '../components/Sidebar/Sidebar';
 import styles from '../styles/Home.module.scss'
 
-export default function Home() {
-  const Img1 = "../images/nnr1.jpg"
+function Home() {
+  
+  const Img1 = "../images/nnr1.jpg";
+
   return (
     <div className={styles.container}>
       <Head>
@@ -52,3 +53,4 @@ export default function Home() {
   )
 }
 
+export default Home;

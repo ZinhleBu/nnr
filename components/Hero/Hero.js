@@ -1,15 +1,15 @@
 import React from 'react'
-import {Link} from 'next/link'
+import Link from 'react-router-dom'
 import styles from '../../styles/Home.module.scss'
 
 const Hero = () => {
     return (
         <div className={styles.hero}>
-             {/* <img
+             <img
               width="100%"
               src="../../images/nnr-header1.png"
               className={styles.heroImg}
-                     /> */}
+                     />
             <div className={styles.hero_wrapper}>
                 <div className={styles.hero_content}>
                     <h1 className={styles.hero_title}>

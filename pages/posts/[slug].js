@@ -1,9 +1,11 @@
 
-import { Link } from 'next/link';
+import Link from 'react-router-dom'
 
-import { getPost, getSlugs } from '../../utils/wordpress';
+import  getPost from '../../utils/wordpress';
+import  getSlugs from '../../utils/wordpress';
 
-export default function PostPage({ post }) {
+export function PostPage({ post }) {
+  
   return (
     <div className="container pt-5">
       <h1 className="text-center pb-5">{post.title.rendered}</h1>

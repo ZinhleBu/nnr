@@ -1,5 +1,5 @@
 
-import { Link } from 'next/link';
+import Link from 'react-router-dom'
 
 import { getEvent, getSlugs } from '../../utils/wordpress';
 

@@ -39,7 +39,7 @@ export async function getSlugs(type) {
   const elementsIds = elements.map((element, index) => {
     return {
       params: {
-        slug: element.slug + $`{/element/index/}`,
+        slug: element.slug,
       },
     };
   });

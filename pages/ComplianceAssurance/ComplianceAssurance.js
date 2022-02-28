@@ -6,4 +6,4 @@ const ComplianceAssurance = () => {
   )
 }
 
-export default ComplianceAssurance
+export default ComplianceAssurance;
