@@ -1,9 +1,9 @@
 import React from 'react'
-import Footer from '../Footer/Footer'
-import Header from '../Header/Header'
+import Footer from '../Footer'
+import Header from '../Header'
 import styles from '../../styles/Home.module.scss'
 
-const Layout = ({ children }) => {
+export default function Layout ({ children }) {
   return (
       <>
       <Header/>
@@ -13,4 +13,3 @@ const Layout = ({ children }) => {
   )
 }
 
-export default Layout

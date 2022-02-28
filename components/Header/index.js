@@ -1,7 +1,7 @@
-import React from 'react'
-import Link from 'react-router-dom'
-import styles from '../../styles/Home.module.scss'
-const Header = () => {
+import React from 'react';
+import Link from 'next/link';
+import styles from '../../styles/Home.module.scss';
+export default function Header () {
     return (
 
         <header>
@@ -68,4 +68,3 @@ const Header = () => {
     )
 }
 
-export default Header;

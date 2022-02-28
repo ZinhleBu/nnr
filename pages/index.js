@@ -1,12 +1,12 @@
-import Head from 'next/head'
+import Head from 'next/head';
 
-import Link from 'react-router-dom'
+import Link from 'next/link';
 
-import Hero from '../components/Hero/Hero'
-import Sidebar from '../components/Sidebar/Sidebar';
-import styles from '../styles/Home.module.scss'
+import Hero from '../components/Hero';
+import Sidebar from '../components/Sidebar';
+import styles from '../styles/Home.module.scss';
 
-function Home() {
+export default function Home() {
   
   const Img1 = "../images/nnr1.jpg";
 
@@ -53,4 +53,3 @@ function Home() {
   )
 }
 
-export default Home;

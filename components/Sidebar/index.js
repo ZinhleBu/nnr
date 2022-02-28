@@ -1,24 +1,8 @@
 import React from 'react'
 import styles from '../../styles/Home.module.scss'
 import { TwitterTimelineEmbed } from 'react-twitter-embed';
-import { getEvents, getPosts } from '../../utils/wordpress';
 
-import Post from '../Post/Post';
-import Event from '../Event/Event';
-
-export function Sidebar({ posts, events }) {
-  
-  const jsPosts = posts.map((post) => {
-    const featuredMedia = post['_embedded']['wp:featuredmedia'][0];
-    return <Post post={post} featuredMedia={featuredMedia} key={post.id} />;
-    
-  });
- 
-  const jsEvents = events.map((event) => {
-    const featuredMedia = event['_embedded']['wp:featuredmedia'][0];
-    return <Event event={event} featuredMedia={featuredMedia} key={event.id} />;
-  });
-  
+export default function Sidebar() {
 
   return (
     <div className={styles.sidebar}>
@@ -26,7 +10,6 @@ export function Sidebar({ posts, events }) {
         <h2 className={styles.sidebarTitle}>Latest News</h2>
         <div className={styles.sidebarCard}>
 
-          <p>{jsPosts}</p>
           <p>New NNR logo announcement</p>
           <p>New NNR logo announcement</p>
           <p>New NNR logo announcement</p>
@@ -39,7 +22,6 @@ export function Sidebar({ posts, events }) {
         <h2 className={styles.sidebarTitle}>Topics in Focus</h2>
         <div className={styles.sidebarCard}>
 
-          <p>{jsEvents}</p>
           <p>New NNR logo announcement</p>
           <p>New NNR logo announcement</p>
           <p>New NNR logo announcement</p>
@@ -67,17 +49,3 @@ export function Sidebar({ posts, events }) {
   )
 }
 
-
-export async function getStaticProps({ params }) {
-  const posts = await getPosts();
-  const events = await getEvents();
-  const media = await getMedia();
-
-  return {
-    props: {
-      posts,
-      events,
-    },
-    revalidate: 10, // In seconds
-  };
-}

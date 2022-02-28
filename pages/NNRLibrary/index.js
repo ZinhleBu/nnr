@@ -1,7 +1,7 @@
-import Link from 'react-router-dom'
-import React from 'react'
+import React from 'react';
+import Link from 'next/link';
 
-const NNRLibrary = () => {
+export default function NNRLibrary () {
   return (
     <>
     <div>
@@ -27,5 +27,3 @@ const NNRLibrary = () => {
     </>
   )
 }
-
-export default NNRLibrary
