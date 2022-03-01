@@ -4,13 +4,21 @@
     position: relative;
     height: 100px;
     position: fixed;
+    .logo_container {
+        min-width: 80px;
+        max-width: 80px;
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .nav {
     min-width: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: flex-end;
     padding: 10px 80px 10px 50px;
 }
@@ -53,6 +61,7 @@
     color: #000;
     text-decoration: none;
     list-style: none;
+    margin: 0 7px 0 7px;
      :hover {
         color: #EE5C44;
     }
@@ -62,6 +71,7 @@
     color: #F7F7F7;
     text-decoration: none;
     list-style: none;
+    margin: 0 7px 0 7px;
      :hover {
         color: #EE5C44;
     }
@@ -85,9 +95,18 @@
 .hero {
     min-width: 100vw;
     min-height: 100%;
+    margin-bottom: 100px;
     position: relative;
-    .heroImg {
+    background-image: url("/images/pexels-markus-distelrath-3044470.jpg");
+    .hero_img_container {
+        min-width: 100vw;
+        min-height: 100%;
+        overflow: hidden;
         position: absolute;
+        .heroImg {
+            min-width: 100%;
+            position: absolute;
+        }
     }
     .hero_wrapper {
         min-width: 80%;
@@ -102,16 +121,20 @@
             position: relative;
             flex-direction: column;
             justify-content: center;
+            align-items: center;
             min-height: 100%;
             .hero_title {
                 font-size: 4rem;
-                color: #000;
+                max-width: 70%;
+                color: #fff;
+                position: relative;
             }
             .hero_buttons {
                 min-width: 100%;
                 display: flex;
                 flex-direction: row;
-                justify-content: flex-start;
+                justify-content: center;
+                position: relative;
             }
         }
     }
@@ -150,6 +173,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin: 0 20px 0 20px;
     right: 0;
     .sidebarSection {
         min-width: 100%;
@@ -200,6 +224,14 @@
             align-items: flex-start;
         }
     }
+}
+
+.pageWrapper {
+    min-width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer {

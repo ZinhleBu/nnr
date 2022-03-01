@@ -6,11 +6,7 @@ import styles from '../../styles/Home.module.scss';
 export default function Hero() {
     return (
         <div className={styles.hero}>
-             {/* <img
-              width="100%"
-              src="../../images/nnr-header1.png"
-              className={styles.heroImg}
-                     /> */}
+            
             <div className={styles.hero_wrapper}>
                 <div className={styles.hero_content}>
                     <h1 className={styles.hero_title}>

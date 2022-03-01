@@ -1,25 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Head from 'next/head';
-
 import Link from 'next/link';
-
+import Image from 'next/image';
 import Hero from '../components/Hero';
 import Sidebar from '../components/Sidebar';
 import styles from '../styles/Home.module.scss';
-import { getEvents, getPosts } from '../utils/Wordpress';
 
 export default function Home() {
   
   const Img1 = "../images/nnr1.jpg";
-  const jsxPosts = posts.map((post) => {
-    const featuredMedia = post['_embedded']['wp:featuredmedia'][0];
-    return <Post post={post} featuredMedia={featuredMedia} key={post.id} />;
-  });
-
-  const jsxEvents = events.map((event) => {
-    const featuredMedia = event['_embedded']['wp:featuredmedia'][0];
-    return <Event event={event} featuredMedia={featuredMedia} key={event.id} />;
-  });
 
   return (
     <div className={styles.container}>
@@ -33,7 +22,7 @@ export default function Home() {
         <div className={styles.home_content}>
           <section className={styles.home_content_section} >
             <div className={styles.home_content_img}>
-             <img 
+             <img
              src={Img1}
              width="100%"
              />
@@ -46,6 +35,8 @@ export default function Home() {
                   <a href="">Read more</a>
                 </Link>
               </button>
+            
+
             </div>
             <h1>Introduction to the NNR</h1>
             <p>
@@ -55,23 +46,10 @@ export default function Home() {
             It is responsible for granting nuclear authorisations and exercising regulatory control related to safety over the siting, design, construction, operation, manufacture of component parts, and the decontamination, decommissioning and closure of nuclear installations; and vessels propelled by nuclear power or having radioactive material on board which is capable of causing nuclear damage.
             </p>
           </section>
-          <Sidebar posts={post}/>
+          <Sidebar />
         </div>
       </div>
     </div>
   )
 }
 
-
-export async function getStaticProps({ params }) {
-  const posts = await getPosts();
-  const events = await getEvents();
-
-  return {
-    props: {
-      posts,
-      events,
-    },
-    revalidate: 10, // In seconds
-  };
-}
