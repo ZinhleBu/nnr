@@ -140,6 +140,33 @@
     }
 }
 
+.hero_page_wrapper {
+    min-width: 80%;
+    min-height: 30vh;
+    padding: 4rem;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: relative;
+    .hero_title_page {
+        font-family: Montserrat;
+        font-size: 2rem;
+        font-weight: 200;
+        max-width: 70%;
+        color: #fff;
+        text-align: center;
+        position: relative;
+    }
+    .hero_description {
+        min-width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        position: relative;
+    }
+}
+
 .buttonPrimary {
     font-size: 1rem;
     min-width: 180px;
@@ -176,7 +203,6 @@
     margin: 0 20px 0 20px;
     right: 0;
     .sidebarSection {
-        min-width: 100%;
         position: relative;
         .sidebarTitle {
             font-size: 1.5rem;
@@ -197,7 +223,7 @@
     min-height: 100%;
     display: flex;
     padding: 0 3rem;
-    justify-content: space-between;
+    justify-content: center;
     position: relative;
     .home_content_section {
         min-width: 75%;
@@ -230,8 +256,23 @@
     min-width: 100%;
     min-height: 100%;
     display: flex;
+    padding: 3rem 3rem;
+    justify-content: space-around;
+    align-items: flex-start;
+    .pageContainer {
+        display: flex;
+        padding: 3rem 3rem;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+
+.content_page {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    padding: 3rem 0rem;
 }
 
 .footer {

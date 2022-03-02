@@ -59,7 +59,7 @@ export default function Header() {
                         <Link href="/About"><a className={styles.link2}>Nuclear Security</a></Link>
                     </li>
                     <li className={styles.navlinks}>
-                        <Link href="/RegulatoryFramework"><a className={styles.link2}>Emergency Planning</a></Link>
+                        <Link href="/EmergencyPlanning"><a className={styles.link2}>Emergency Planning</a></Link>
                     </li>
                     <li className={styles.navlinks}>
                         <Link href="/Authorisations"><a className={styles.link2}>International Cooperation</a></Link>
